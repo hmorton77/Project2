@@ -1,6 +1,13 @@
 module.exports = function (sequelize, DataTypes) {
   var Quarantine = sequelize.define("Quarantine", {
-    name: {
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    lastName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
