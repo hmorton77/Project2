@@ -51,42 +51,60 @@
         <div class="form-row">
             <div class="col-md-6 mb-3">
                 <label for="validationDefault01">First name</label>
-                <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                <input type="text" class="form-control" id="validationDefault01" value="John" required>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="validationDefault02">Last name</label>
-                <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                <input type="text" class="form-control" id="validationDefault02" value="Smith" required>
             </div>
-        </div>
-        <br>
-        <div class="form-row">
-            <div class="col-md-3 mb-3">
-                <label for="validationDefault05">Quarantine Start</label>
-                <input type="text" class="form-control" id="validationDefault05" required>
-            </div>
-            <!-- <div class="col-md-3 mb-3">
-                <label for="validationDefault04">State</label>
-                <select class="custom-select" id="validationDefault04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>...</option>
-                </select>
-            </div> -->
-            <div class="col-md-3 mb-3">
-                <label for="validationDefault05">Quarantine End</label>
-                <input type="text" class="form-control" id="validationDefault05" required>
-            </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="validationDefault05">COVID Positive Date</label>
                 <input type="text" class="form-control" id="validationDefault05" required>
             </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="validationDefault05">Employee Health Condition</label>
                 <input type="text" class="form-control" id="validationDefault05" required>
             </div>
         </div>
-        <br>
-        <br>
-        <button class="btn btn-primary" type="submit">Add Employee</button>
     </form>
+       
+
+
+<div class="container-fluid">
+        <form action="#" class="ws-validate">
+            <h2>Quarantine Start Date</h2>
+    
+            <div class="form-row show-inputbtns">
+                <input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+            </div>
+            <div class="form-row">
+                <input type="submit" />
+            </div>
+        </form>
+
+    <form action="#" class="ws-validate">
+        <h2>Quarantine End Date</h2>
+
+        <div class="form-row show-inputbtns">
+            <input type="date" data-date-inline-picker="false" data-date-open-on-focus="true" />
+        </div>
+        <div class="form-row">
+            <input type="submit" />
+        </div>
+    </form>
+
+    <button class="btn btn-primary" type="submit">Add Employee</button>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script src="calendar.js"></script>
+</body>
 
 </html>
