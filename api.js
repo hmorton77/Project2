@@ -7,28 +7,36 @@
 // A Request (when submitting data to a resource via POST or PUT, you must submit your request body in JSON format)
 // read more: https://sendgrid.com/docs/for-developers/sending-email/quickstart-nodejs
 
-
+const path = require("path")
 //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
+// using Twilio SendGrid's v3 Node.js Library
+// https://github.com/sendgrid/sendgrid-nodejs
+
 const sgMail = require('@sendgrid/mail')
 const dotenv = require('dotenv')
 
 dotenv.config()
+// connection to Public drive 
+//app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
+//..
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-console.log(process.env.SENDGRID_API_KEY)
 const msg = {
-  to: 'jandoe47@yahoo.com', // Change to your recipient
-  from: 'leannaland2011@gmail.com', // Change to your verified sender
-  subject: 'Sending with SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-}
+  to: ['leannaland2011@gmail.com', 'l_leanna04@yahoo.com'], // Change to your recipient
+  from: {
+    name: 'Employer Name',
+    email: 'leannaland2011@gmail.com', // Change to your verified sender
 
+  },
+  subject: 'Important Work Notice',
+  text: 'Hello, it is time for you to return to work. Please attend your next shift',
+  html: '<strong>Hello, it is time for you to return to work. Please attend your next shift. </strong>',
+}
 sgMail
   .send(msg)
   .then(() => {
     console.log('Email sent')
   })
-  // .catch((error) => {
-  //   console.error(error)
-  // })
+  .catch((error) => {
+    console.error(error)
+  })

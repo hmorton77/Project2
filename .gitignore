@@ -2,3 +2,4 @@ sendgrid.end
 sendgrid
 node_modules
 sendgrid.env
+.env
