@@ -24,3 +24,13 @@ $(function () {
         });
     });
 });
+
+// Send AJAX post request with on click event.
+$("#NewEmp").click(function(){
+    $.post("/api/cases", newCase)
+    // On success, post to the console.
+    .then(function() {
+    console.log("Success")
+    });
+})
+
