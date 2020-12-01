@@ -10,11 +10,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "..public/submission.html"));
   });
   //open the symptomatic employee page
-  app.get("/submit", function (req, res) {
+  app.get("/symptomatic", function (req, res) {
     res.sendFile(path.join(__dirname, "..public/symptomatic.html"));
   });
   // open the hospitalized employee page
-  app.get("/submit", function (req, res) {
+  app.get("/hospitalized", function (req, res) {
     res.sendFile(path.join(__dirname, "..public/hospitalized.html"));
   });
 };
