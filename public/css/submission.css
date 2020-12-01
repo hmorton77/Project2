@@ -4,6 +4,7 @@ label {
 
 h2 {
     color: white;
+    align-content: center;
 }
 
 .hide-replaced.ws-inputreplace {
@@ -43,6 +44,7 @@ form {
 .form-row {
     padding: 5px 10px;
     margin: 5px 0;
+    align-content: center;
 }
 label {
     display: block;
@@ -56,6 +58,7 @@ label {
 }
 .form-row input[type="checkbox"] {
     width: 15px;
+    align-content: center;
 }
 .date-display {
     display: inline-block;
@@ -68,6 +71,7 @@ label {
     display: inline-block;
 }
 
-/* .button {
-    align-content: center;
+/* .btn-primary {
+    align-items: center;
 } */
+
