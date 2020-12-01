@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Quarantine = sequelize.define("Quarantine", {
+  var Quarantine = sequelize.define("employee", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
