@@ -27,6 +27,10 @@ $(function () {
         });
     });
 });
+
+function submitEmployee(data) {
+    $.post("/api/cases/", data)
+};
 var firstNameInput = $("#firstName");
 var lastNameInput = $("#lastName");
 var PosDate = $("#posDate");
@@ -34,9 +38,7 @@ var condition = $("#condition");
 var qStart = $("#qStart");
 var qEnd = $("#qEnd");
 
-function submitEmployee(Quarantine) {
-    $.post("/api/cases/", Quarantine)
-};
+
 
 // Send AJAX post request with on click event.
 $("#newEmp").on("click", function () {
@@ -56,6 +58,8 @@ $("#newEmp").on("click", function () {
     console.log(newEmployee);
     submitEmployee(newEmployee);
 });
+
+
 
 
 });
