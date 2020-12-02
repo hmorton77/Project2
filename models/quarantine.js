@@ -4,44 +4,40 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [100],
+        len: [1, 100],
       },
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [100],
+        len: [1, 100],
       },
     },
     quarantineStart: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [100],
+        len: [1, 100],
       },
     },
     quarantineEnd: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [100],
+        len: [1, 100],
       },
     },
     covidConfirmed: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       validate: {
-        len: [100],
+        len: [1, 100],
       },
     },
     currentCondition: {
       type: DataTypes.STRING,
       defaultValue: "quarantining",
-    },
-    dateRecorded: {
-      type: DataTypes.DATE,
-      allowNull: false,
     },
     activeStatus: {
       type: DataTypes.BOOLEAN,
