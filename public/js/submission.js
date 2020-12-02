@@ -1,17 +1,20 @@
-webshim.setOptions('forms-ext', {
-    replaceUI: 'auto',
-    types: 'date',
-    date: {
-        startView: 2,
-        inlinePicker: true,
-        classes: 'hide-inputbtns'
-    }
-});
-webshim.setOptions('forms', {
-    lazyCustomMessages: true
-});
-//start polyfilling
-webshim.polyfill('forms forms-ext');
+$(document).ready(function() {
+// webshim.setOptions('forms-ext', {
+//     replaceUI: 'auto',
+//     types: 'date',
+//     date: {
+//         startView: 2,
+//         inlinePicker: true,
+//         classes: 'hide-inputbtns'
+//     }
+// });
+// webshim.setOptions('forms', {
+//     lazyCustomMessages: true
+// });
+// //start polyfilling
+// webshim.polyfill('forms forms-ext');
+
+// var routes = require("../routes/api-routes.js");
 
 //only last example using format display
 $(function () {
@@ -24,13 +27,37 @@ $(function () {
         });
     });
 });
+var firstNameInput = $("#firstName");
+var lastNameInput = $("#lastName");
+var PosDate = $("#posDate");
+var condition = $("#condition");
+var qStart = $("#qStart");
+var qEnd = $("#qEnd");
+
+function submitEmployee(Quarantine) {
+    $.post("/api/cases/", Quarantine)
+};
 
 // Send AJAX post request with on click event.
-$("#NewEmp").click(function(){
-    $.post("/api/cases", newCase)
+$("#newEmp").on("click", function () {
+    // event.preventDefault();
+    console.log("clicked");
+    $.post("/api/cases")
     // On success, post to the console.
-    .then(function() {
-    console.log("Success")
-    });
-})
+    var newEmployee = {
+        firstName: firstNameInput.val().trim(),
+        lastName: lastNameInput.val().trim(),
+        covidConfirmed: PosDate.val().trim(),
+        currentCondition: condition.val().trim(),
+        quarantineStart: qStart.val().trim(),
+        quarantineEnd: qEnd.val().trim()
+
+    };
+    console.log(newEmployee);
+    submitEmployee(newEmployee);
+});
+
+
+});
+
 
