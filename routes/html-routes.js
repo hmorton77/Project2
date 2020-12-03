@@ -6,11 +6,7 @@ module.exports = function (app) {
     res.render("index", potato);
   });
   // the submission page when we open the "add patient page"
-<<<<<<< HEAD
-  app.get("/submit", function (req, res) {
-=======
   app.get("/submission", function (req, res) {
->>>>>>> origin/bradley
     res.render("submission", potato);
   });
   //open the symptomatic employee page
