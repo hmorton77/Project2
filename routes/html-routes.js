@@ -6,15 +6,18 @@ module.exports = function (app) {
     res.render("index", potato);
   });
   // the submission page when we open the "add patient page"
-  app.get("/submit", function (req, res) {
-    res.render("submission", employee);
+  app.get("/submission", function (req, res) {
+    res.render("submission", potato);
   });
   //open the symptomatic employee page
   app.get("/symptomatic", function (req, res) {
-    res.sendFile(path.join(__dirname, "..public/"));
+    res.render("symptomatic", potato);
   });
   // open the hospitalized employee page
   app.get("/hospitalized", function (req, res) {
-    res.sendFile(path.join(__dirname, "..public/"));
+    res.render("hospitalized", potato);
+  });
+  app.get("/reminder", function (req, res) {
+    res.render("reminder", potato);
   });
 };
