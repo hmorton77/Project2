@@ -15,11 +15,17 @@ const path = require("path")
 const sgMail = require('@sendgrid/mail')
 const dotenv = require('dotenv')
 
-dotenv.config()
+
 // connection to Public drive 
 //app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
 //..
+//routes
 
+
+
+/////
+
+dotenv.config()
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const msg = {
   to: ['leannaland2011@gmail.com', 'l_leanna04@yahoo.com'], // Change to your recipient
@@ -40,3 +46,4 @@ sgMail
   .catch((error) => {
     console.error(error)
   })
+
