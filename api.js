@@ -42,9 +42,9 @@ const msg = {
 
 
 
-var inputvalue = $(".input").val()
+var inputvalue = $(".input").val();
 
-
+$( "#webapi" ).click(function() {
 
 sgMail
   .send(msg)
@@ -55,3 +55,4 @@ sgMail
     console.error(error)
   })
 
+});
