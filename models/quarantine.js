@@ -39,10 +39,6 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       defaultValue: "quarantining",
     },
-    dateRecorded: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     activeStatus: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
