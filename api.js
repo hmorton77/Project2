@@ -15,14 +15,21 @@ const path = require("path")
 const sgMail = require('@sendgrid/mail')
 const dotenv = require('dotenv')
 
-dotenv.config()
+
 // connection to Public drive 
 //app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
 //..
+//routes
 
+
+
+
+/////
+
+dotenv.config()
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const msg = {
-  to: ['leannaland2011@gmail.com', 'l_leanna04@yahoo.com'], // Change to your recipient
+  to: inputvalue, // Change to your recipient
   from: {
     name: 'Employer Name',
     email: 'leannaland2011@gmail.com', // Change to your verified sender
@@ -32,6 +39,13 @@ const msg = {
   text: 'Hello, it is time for you to return to work. Please attend your next shift',
   html: '<strong>Hello, it is time for you to return to work. Please attend your next shift. </strong>',
 }
+
+
+
+var inputvalue = $(".input").val()
+
+
+
 sgMail
   .send(msg)
   .then(() => {
@@ -40,3 +54,4 @@ sgMail
   .catch((error) => {
     console.error(error)
   })
+
