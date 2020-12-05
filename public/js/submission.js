@@ -78,14 +78,3 @@ function test() {
 
 
 
-// $('#form').submit(function(){
-//     $.ajax({
-//       url: $('#form').attr('action'),
-//       type: 'POST',
-//       data : $('#form').serialize(),
-//       success: function(){
-//         console.log('form submitted.');
-//       }
-//     });
-//     return false;
-// });

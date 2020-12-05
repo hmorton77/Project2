@@ -3,3 +3,4 @@ sendgrid
 node_modules
 sendgrid.env
 .env
+apiData.js
