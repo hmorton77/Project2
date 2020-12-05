@@ -65,3 +65,8 @@ $("#newEmp").on("click", function () {
 });
 
 
+function test() {
+    alert("Information Submitted!");
+    console.log(res)
+    return true;
+ }
