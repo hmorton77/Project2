@@ -1,5 +1,5 @@
 <div class="jumbotron">
-    <h1 class="display-4">Future Home of Sequelized Table Data </h1>
+    <h1 class="display-4">All Employees </h1>
     <p class="lead">Placeholder [p] tag information</p>
     <hr class="my-4" />
     <table style="width:100%">
@@ -13,7 +13,7 @@
             <th>Created At</th>
             <th>Updated At</th>
         </tr>
-        {{#each employees}}
+        {{#each result}}
         <tr>
             <td>{{this.firstName}}</td>
             <td>{{this.lastName}}</td>
@@ -25,11 +25,6 @@
             <td>{{this.updatedAt}}</td>
         </tr>
         {{/each}}
-        <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-        </tr>
     </table>
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
@@ -81,3 +76,9 @@
         </div>
     </div>
 </div>
+
+<style media="screen">
+    body {
+        background-color: #242323;
+    }
+</style>

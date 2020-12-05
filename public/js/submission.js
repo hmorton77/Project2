@@ -65,3 +65,8 @@ $(document).ready(function () {
 });
 
 
+function test() {
+    alert("Information Submitted!");
+    console.log(res)
+    return true;
+ }

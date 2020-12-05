@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function (app) {
   // get all the cases to be put on the main page
   app.get("/api/cases", function (req, res) {
-    db.Quarantine.findAll({}).then(function (dbQuar) {
+    db.Employee.findAll({}).then(function (dbQuar) {
       res.json(dbQuar);
     });
   });
@@ -86,32 +86,26 @@ module.exports = function (app) {
         res.json(err);
       });
   });
-// Check if symptomatic
-app.get("/api/cases/symptomatic", function (req, res) {
-  // db.Quarantine.findAll({currentCondition: "symptomatic"}).then(function (dbQuar) {
-  //   res.json(dbQuar);
-  // });
+  // Check if symptomatic
+  app.get("/api/cases/symptomatic", function (req, res) {
+    // db.Quarantine.findAll({currentCondition: "symptomatic"}).then(function (dbQuar) {
+    //   res.json(dbQuar);
+    // });
 
-  var data = [
-    {
-      firstName: "Joe",
-      lastName: "Bob"
-    },
-    {
-      firstName: "Jill",
-      lastName: "Bob"
-    },
-    {
-      firstName: "Billy",
-      lastName: "Bob"
-    },
-  ]
-  res.send("data");
-});
-
-
-
+    var data = [
+      {
+        firstName: "Joe",
+        lastName: "Bob",
+      },
+      {
+        firstName: "Jill",
+        lastName: "Bob",
+      },
+      {
+        firstName: "Billy",
+        lastName: "Bob",
+      },
+    ];
+    res.send("data");
+  });
 };
-
-
-
