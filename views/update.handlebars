@@ -1,0 +1,73 @@
+<style media="screen">
+    body {
+        background-color: #242323;
+    }
+</style>
+
+<form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom01">First name</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" value="" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom03">COVID Positive Date</label>
+            <input type="date" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+                {{!-- Please provide a valid city. --}}
+            </div>
+        </div>
+        {{!-- <div class="col-md-3 mb-3">
+      <label for="validationCustom04">State</label>
+      <select class="custom-select" id="validationCustom04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div> --}}
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Employee Condition</label>
+            <input type="text" class="form-control" id="validationCustom04" required>
+            <div class="invalid-feedback">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+            <label for="validationCustom03">Start Date</label>
+            <input type="date" class="form-control" id="validationCustom05" required>
+            <div class="invalid-feedback">
+                {{!-- Please provide a valid city. --}}
+            </div>
+        </div>
+
+            <div class="col-md-6">
+            <label for="validationCustom03">End Date</label>
+            <input type="date" class="form-control" id="validationCustom06" required>
+            <div class="invalid-feedback">
+                {{!-- Please provide a valid city. --}}
+            </div>
+        </div>     
+           </div>
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-dark btn-lg btn-block" onclick="return test();">Add New Employee</button>
+    </div>
+
+</form>

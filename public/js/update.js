@@ -3,16 +3,16 @@ $(document).ready(function () {
         $.put("/api/cases/", data)
     };
 
-    function deleteEmployee(data) {
-        $.put("/api/cases/delete", data)
-    };
+    // function deleteEmployee(data) {
+    //     $.put("/api/cases/delete", data)
+    // };
 
-    var firstNameInput = $("#firstName");
-    var lastNameInput = $("#lastName");
-    var PosDate = $("#posDate");
-    var condition = $("#condition");
-    var qStart = $("#qStart");
-    var qEnd = $("#qEnd");
+    // var firstNameInput = $("#firstName");
+    // var lastNameInput = $("#lastName");
+    // var PosDate = $("#posDate");
+    // var condition = $("#condition");
+    // var qStart = $("#qStart");
+    // var qEnd = $("#qEnd");
 
     // function updateEmployee(post) {
     //     $.ajax({
@@ -41,13 +41,13 @@ $(document).ready(function () {
     })
 });
 
-$("#deleteButton").on("click", function () {
-    var identifier = {
-        id = ""
-    }
-    updateEmployee(identifier);
+// $("#deleteButton").on("click", function () {
+//     var identifier = {
+//         id = ""
+//     }
+//     updateEmployee(identifier);
 
-});
+// });
 
 // Testing for get request
 $.get("api/cases/symptomatic").then(function(data){
