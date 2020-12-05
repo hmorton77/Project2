@@ -31,16 +31,17 @@ module.exports = function (app) {
   });
   //posting a new employee case FROM THE SUBMISSION FORM
   app.post("/api/cases", function (req, res) {
-    db.Quarantine.Create({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      quarantineStart: req.body.quarantineStart,
-      quarantineEnd: req.body.quarantineEnd,
-      covidConfirmed: req.body.covidConfirmed,
-      currentCondition: req.body.currentCondition,
-    }).then(function (dbQuar) {
-      res.json(dbQuar);
-    });
+    console.log(req.body);
+    // db.Quarantine.Create({
+    //   firstName: req.body.firstName,
+    //   lastName: req.body.lastName,
+    //   quarantineStart: req.body.quarantineStart,
+    //   quarantineEnd: req.body.quarantineEnd,
+    //   covidConfirmed: req.body.covidConfirmed,
+    //   currentCondition: req.body.currentCondition,
+    // }).then(function (dbQuar) {
+    //   res.json(dbQuar);
+    // });
   });
   //"delete" route will just change the active status to false
   app.put("/api/cases", function (req, res) {
@@ -85,4 +86,32 @@ module.exports = function (app) {
         res.json(err);
       });
   });
+// Check if symptomatic
+app.get("/api/cases/symptomatic", function (req, res) {
+  // db.Quarantine.findAll({currentCondition: "symptomatic"}).then(function (dbQuar) {
+  //   res.json(dbQuar);
+  // });
+
+  var data = [
+    {
+      firstName: "Joe",
+      lastName: "Bob"
+    },
+    {
+      firstName: "Jill",
+      lastName: "Bob"
+    },
+    {
+      firstName: "Billy",
+      lastName: "Bob"
+    },
+  ]
+  res.send("data");
+});
+
+
+
 };
+
+
+

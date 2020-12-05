@@ -35,3 +35,43 @@ $(document).ready(function () {
     })
 });
 
+// Testing for get request
+$.get("api/cases/symptomatic").then(function(data){
+    console.log(data)
+  //   for (let i = 0; i < data.length; i++) {
+  //   var div = document.createElement("div")
+  // div.innerHTML = `
+  // <p> firstName: ${data[i].firstName}</p>
+  // `
+  // console.log(div);
+  // document.getElementById("symptomatic-employees").appendChild(div)
+    
+  // }
+  })
+  
+  // var data = [
+  //   {
+  //     firstName: "Joe",
+  //     lastName: "Bob"
+  //   },
+  //   {
+  //     firstName: "Jill",
+  //     lastName: "Bob"
+  //   },
+  //   {
+  //     firstName: "Billy",
+  //     lastName: "Bob"
+  //   },
+  // ]
+  
+  
+  // for (let i = 0; i < data.length; i++) {
+  //   var div = document.createElement("div")
+  // div.innerHTML = `
+  // <p> firstName: ${data[i].firstName}</p>
+  // `
+  // console.log(div);
+  // document.getElementById("symptomatic-employees").appendChild(div)
+    
+  // }
+
