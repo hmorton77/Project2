@@ -4,11 +4,7 @@ var potato = ["this is some data about potatoes"];
 module.exports = function (app) {
   // our home page which we should get when we open the app
   app.get("/", function (req, res) {
-    db.Employee.findAll({
-      where: {
-        id: 1,
-      },
-    }).then(function (result) {
+    db.Employee.findAll({}).then(function (result) {
       console.log(result);
       var employeeObj = {
         results: result,
@@ -22,22 +18,22 @@ module.exports = function (app) {
   });
   //open the symptomatic employee page
   app.get("/symptomatic", function (req, res) {
-    db.Employee.findAll({
-      where: {
-        currentCondtion: "symptomatic",
-      },
-    }).then(function (result) {
-      res.render("index", result);
+    db.Employee.findAll({}).then(function (result) {
+      console.log(result);
+      var employeeObj = {
+        results: result,
+      };
+      res.render("symptomatic", employeeObj);
     });
   });
   // open the hospitalized employee page
   app.get("/hospitalized", function (req, res) {
-    db.Employee.findAll({
-      where: {
-        currentCondtion: "hospitalized",
-      },
-    }).then(function (result) {
-      res.render("index", result);
+    db.Employee.findAll({}).then(function (result) {
+      console.log(result);
+      var employeeObj = {
+        results: result,
+      };
+      res.render("hospitalized", employeeObj);
     });
   });
   app.get("/reminder", function (req, res) {
