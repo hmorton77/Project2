@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function updateEmployee(data) {
-        $.post("/api/cases/", data)
+        $.put("/api/cases/", data)
     };
     var firstNameInput = $("#firstName");
     var lastNameInput = $("#lastName");
@@ -9,7 +9,7 @@ $(document).ready(function () {
     var qStart = $("#qStart");
     var qEnd = $("#qEnd");
 
-    function updatePost(post) {
+    function updateEmployee(post) {
         $.ajax({
             method: "PUT",
             url: "/api/posts",
