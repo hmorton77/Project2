@@ -13,21 +13,21 @@
             <th>Created At</th>
             <th>Updated At</th>
             <th>Button</th>
-            <th>Button2</th>
 
         </tr>
+        {{#each results}}
         <tr>
-            <td>{{results.firstName}}</td>
-            <td>{{results.lastName}}</td>
-            <td>{{results.quarantineStart}}</td>
-            <td>{{results.quarantineEnd}}</td>
-            <td>{{results.covidConfirmed}}</td>
-            <td>{{results.currentCondition}}</td>
-            <td>{{results.createdAt}}</td>
-            <td>{{results.updatedAt}}</td>
-            <td><a class="btn btn-primary btn-sm" href="#" role="button">delete</a></td>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.quarantineStart}}</td>
+            <td>{{this.quarantineEnd}}</td>
+            <td>{{this.covidConfirmed}}</td>
+            <td>{{this.currentCondition}}</td>
+            <td>{{this.createdAt}}</td>
+            <td>{{this.updatedAt}}</td>
             <td><a class="btn btn-primary btn-sm" href="#" role="button">edit</a></td>
         </tr>
+        {{/each}}
     </table>
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
