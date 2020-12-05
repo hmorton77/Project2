@@ -11,3 +11,12 @@
 .jumbotron {
     min-height: 500px;
 }
+
+h5 {
+    color: white;
+}
+
+footer {
+    color: white;
+    align-content: center;
+}

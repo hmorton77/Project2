@@ -73,7 +73,6 @@ function test() {
     console.log($('#validationCustom04').val())
     console.log($('#validationCustom05').val())
     console.log($('#validationCustom06').val())
-    console.log($('#date').val())
     return true;
  }
 
