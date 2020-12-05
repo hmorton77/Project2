@@ -70,11 +70,14 @@ function test() {
     console.log($('#validationCustom01').val())
     console.log($('#validationCustom02').val())
     console.log($('#validationCustom03').val())
+    console.log($('#validationCustom04').val())
     console.log($('#validationCustom05').val())
+    console.log($('#validationCustom06').val())
     console.log($('#date').val())
-    console.log($('#email').val())
     return true;
  }
+
+
 
 // $('#form').submit(function(){
 //     $.ajax({
