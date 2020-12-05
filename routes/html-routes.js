@@ -4,10 +4,16 @@ var potato = ["this is some data about potatoes"];
 module.exports = function (app) {
   // our home page which we should get when we open the app
   app.get("/", function (req, res) {
-    db.Employee.findAll({}).then(function (result) {
-      console.log(result);
+    db.Employees.findAll({
+      where: {
+        id: 1,
+      },
+    }).then(function (result) {
+      // console.log(result)
+      var jsonResults = JSON.parse(JSON.stringify(result));
+      console.log(jsonResults[0]);
       var employeeObj = {
-        results: result,
+        results: jsonResults[0],
       };
       res.render("index", employeeObj);
     });

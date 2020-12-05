@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Employee = sequelize.define("Employee", {
+  var Employees = sequelize.define("Employees", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -52,5 +52,5 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: "01/01/2020",
     },
   });
-  return Employee;
+  return Employees;
 };
