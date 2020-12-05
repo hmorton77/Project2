@@ -44,7 +44,7 @@ module.exports = function (app) {
     // });
   });
   //"delete" route will just change the active status to false
-  app.put("/api/cases", function (req, res) {
+  app.put("/api/cases/delete", function (req, res) {
     db.Quarantine.update(
       {
         activeStatus: false,
