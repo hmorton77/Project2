@@ -67,6 +67,23 @@ $(document).ready(function () {
 
 function test() {
     alert("Information Submitted!");
-    console.log(res)
+    console.log($('#validationCustom01').val())
+    console.log($('#validationCustom02').val())
+    console.log($('#validationCustom03').val())
+    console.log($('#validationCustom05').val())
+    console.log($('#date').val())
+    console.log($('#email').val())
     return true;
  }
+
+// $('#form').submit(function(){
+//     $.ajax({
+//       url: $('#form').attr('action'),
+//       type: 'POST',
+//       data : $('#form').serialize(),
+//       success: function(){
+//         console.log('form submitted.');
+//       }
+//     });
+//     return false;
+// });
