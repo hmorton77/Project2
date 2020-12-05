@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function (app) {
   // get all the cases to be put on the main page
   app.get("/api/cases", function (req, res) {
-    db.Quarantine.findAll({}).then(function (dbQuar) {
+    db.Employee.findAll({}).then(function (dbQuar) {
       res.json(dbQuar);
     });
   });
@@ -38,6 +38,8 @@ module.exports = function (app) {
       quarantineEnd: req.body.quarantineEnd,
       covidConfirmed: req.body.covidConfirmed,
       currentCondition: req.body.currentCondition,
+      createdAt: req.body.createdAt,
+      updatedAt: req.body.updatedAt,
     }).then(function (dbQuar) {
       res.json(dbQuar);
     });
