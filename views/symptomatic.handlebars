@@ -1,21 +1,49 @@
- 	<link rel="stylesheet" href="/css/symptomatic.css">
+<div class="jumbotron">
+  <h1 class="display-4">Symptomatic Employee Data</h1>
+  <p class="lead">Placeholder [p] tag information</p>
+  <hr class="my-4">
+  <table style="width:100%">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Quarantine Start</th>
+      <th>Quarantine End</th>
+      <th>COVID-19 diagnosis date</th>
+      <th>Current Condition</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Button</th>
 
+    </tr>
+    {{#each results}}
+    <tr>
+      <td>{{this.firstName}}</td>
+      <td>{{this.lastName}}</td>
+      <td>{{this.quarantineStart}}</td>
+      <td>{{this.quarantineEnd}}</td>
+      <td>{{this.covidConfirmed}}</td>
+      <td>{{this.currentCondition}}</td>
+      <td>{{this.createdAt}}</td>
+      <td>{{this.updatedAt}}</td>
+      <td><a class="btn btn-primary btn-sm" href="#" role="button">edit</a></td>
+    </tr>
+    {{/each}}
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+</div>
 
-          <div class="jumbotron">
-            <h1 class="display-4">Will list current symptomatic employees here</h1>
-            <p class="lead">Placeholder [p] tag information</p>
-            <hr class="my-4">
-            <p>Even more Placeholder [p] tag information</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-        </div>
-    
-        <div class="card text-white bg-dark" style="width: 18rem;">
-          <img class="card-img-top" src="../COVID Track Pictures/nurse.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Condition Worsen?</h5>
-            <p class="card-text">For employees that may need hospitalization.</p>
-            <a href="hospitalized.html" class="btn btn-light">Current List</a>
-          </div>
-        </div>
+{{!-- <div class="card text-white bg-dark" style="width: 18rem;">
+  <img class="card-img-top" src="../images/nurse.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Condition Worsen?</h5>
+    <p class="card-text">For employees that may need hospitalization.</p>
+    <a href="hospitalized.handlebars" class="btn btn-light">Current List</a>
+  </div>
+</div> --}}
+
+<style media="screen">
+  body {
+    background-color: #242323;
+  }
+</style>

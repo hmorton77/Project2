@@ -1,10 +1,40 @@
-          <div class="jumbotron">
-            <h1 class="display-4">Will list current list of hospitalized here.</h1>
-            <p class="lead">Placeholder [p] tag information</p>
-            <hr class="my-4">
-            <p>Even more Placeholder [p] tag information</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-        </div>
-    
+<div class="jumbotron">
+    <h1 class="display-4">Hospitalized Employees Data</h1>
+    <p class="lead">Placeholder [p] tag information</p>
+    <hr class="my-4">
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Quarantine Start</th>
+            <th>Quarantine End</th>
+            <th>COVID-19 diagnosis date</th>
+            <th>Current Condition</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Button</th>
+
+        </tr>
+        {{#each results}}
+        <tr>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.quarantineStart}}</td>
+            <td>{{this.quarantineEnd}}</td>
+            <td>{{this.covidConfirmed}}</td>
+            <td>{{this.currentCondition}}</td>
+            <td>{{this.createdAt}}</td>
+            <td>{{this.updatedAt}}</td>
+            <td><a class="btn btn-primary btn-sm" href="#" role="button">edit</a></td>
+        </tr>
+        {{/each}}
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+</div>
+
+<style media="screen">
+    body {
+        background-color: #242323;
+    }
+</style>

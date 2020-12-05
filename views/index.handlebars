@@ -1,8 +1,34 @@
 <div class="jumbotron">
-    <h1 class="display-4">Future Home of Sequelized Table Data</h1>
+    <h1 class="display-4">All Employees </h1>
     <p class="lead">Placeholder [p] tag information</p>
     <hr class="my-4" />
-    <p>Even more Placeholder [p] tag information</p>
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Quarantine Start</th>
+            <th>Quarantine End</th>
+            <th>COVID-19 diagnosis date</th>
+            <th>Current Condition</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Button</th>
+
+        </tr>
+        {{#each results}}
+        <tr>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.quarantineStart}}</td>
+            <td>{{this.quarantineEnd}}</td>
+            <td>{{this.covidConfirmed}}</td>
+            <td>{{this.currentCondition}}</td>
+            <td>{{this.createdAt}}</td>
+            <td>{{this.updatedAt}}</td>
+            <td><a class="btn btn-primary btn-sm" href="#" role="button">edit</a></td>
+        </tr>
+        {{/each}}
+    </table>
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </p>
@@ -20,7 +46,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Symptomatic Employees</h5>
                     <p class="card-text">Comprehensive Ongoing List of Symptomatic Employees not yet Quaranteed </p>
-                    <a href="symptomatic.handlebars" class="btn btn-light">View List</a>
+                    <a href="/symptomatic" class="btn btn-light">View List</a>
                 </div>
             </div>
         </div>
@@ -28,16 +54,12 @@
         <!-- Hospitalized Employees -->
         <div class="col-md-4 d-flex align-items-stretch">
             <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-<<<<<<< HEAD:views/index.handlebars
-                <img class="card-img-top" src="../images//Hospitalized.jpg" alt="Card image cap">
-=======
                 <img class="card-img-top" src="../images/Hospitalized.jpg" alt="Card image cap">
->>>>>>> origin/bradley:public/views/index.handlebars
                 <div class="card-body">
                     <h5 class="card-title">Currently Hospitalized</h5>
                     <p class="card-text">List of All Employees who are Currently in the Hospital Battling COVID-19.
                     </p>
-                    <a href="hospitalized.handlebars" class="btn btn-light">View List</a>
+                    <a href="/hospitalized" class="btn btn-light">View List</a>
                 </div>
             </div>
         </div>
@@ -51,9 +73,22 @@
                     <h5 class="card-title">Add Employees</h5>
                     <p class="card-text">Managers can add new employees who are symptomatic to the current database.
                     </p>
-                    <a href="submission.handlebars" class="btn btn-light">View List</a>
+                    <a href="/submission" class="btn btn-light">View List</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style media="screen">
+    body {
+        background-color: #242323;
+    }
+</style>
+
+<footer>
+    <div>
+        <h5> Contributors: Leanna Land, Cyle McGregor, Harold Morton, Bradley Williams</h5>
+    </div>
+
+</footer>

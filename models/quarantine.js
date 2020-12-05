@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Quarantine = sequelize.define("employee", {
+  var Employees = sequelize.define("Employees", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,7 +29,7 @@ module.exports = function (sequelize, DataTypes) {
       },
     },
     covidConfirmed: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
@@ -43,6 +43,14 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
     },
+    createdAt: {
+      type: DataTypes.STRING,
+      defaultValue: "01/01/2020",
+    },
+    updatedAt: {
+      type: DataTypes.STRING,
+      defaultValue: "01/01/2020",
+    },
   });
-  return Quarantine;
+  return Employees;
 };
