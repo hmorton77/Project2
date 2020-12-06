@@ -32,16 +32,21 @@ module.exports = function (app) {
   //posting a new employee case FROM THE SUBMISSION FORM
   app.post("/api/cases", function (req, res) {
     console.log(req.body);
-    // db.Quarantine.Create({
-    //   firstName: req.body.firstName,
-    //   lastName: req.body.lastName,
-    //   quarantineStart: req.body.quarantineStart,
-    //   quarantineEnd: req.body.quarantineEnd,
-    //   covidConfirmed: req.body.covidConfirmed,
-    //   currentCondition: req.body.currentCondition,
-    // }).then(function (dbQuar) {
-    //   res.json(dbQuar);
-    // });
+    console.log("clicked route");
+    db.Quarantine.Create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      quarantineStart: req.body.quarantineStart,
+      quarantineEnd: req.body.quarantineEnd,
+      covidConfirmed: req.body.covidConfirmed,
+      currentCondition: req.body.currentCondition,
+      activeStatus: "1",
+      createdAt: "01/01/2020",
+      updatedAt: "01/01/2020"
+
+    }).then(function (dbQuar) {
+      res.json(dbQuar);
+    });
   });
   //"delete" route will just change the active status to false
   app.put("/api/cases/delete", function (req, res) {

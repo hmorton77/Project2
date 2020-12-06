@@ -15,7 +15,7 @@
             <th>Button</th>
 
         </tr>
-        {{#each result}}
+        {{#each results}}
         <tr>
             <td>{{this.firstName}}</td>
             <td>{{this.lastName}}</td>
@@ -25,7 +25,7 @@
             <td>{{this.currentCondition}}</td>
             <td>{{this.createdAt}}</td>
             <td>{{this.updatedAt}}</td>
-            <td><a class="btn btn-primary btn-lg update-button" href="#" role="button">Edit</a></td>
+            <td><a class="btn btn-primary btn-lg update-button" href="/update" role="button">Edit</a></td>
 
         </tr>
         {{/each}}
