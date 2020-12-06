@@ -39,33 +39,3 @@ $(document).ready(function () {
     });
   });
 });
-<<<<<<< HEAD
-
-
-function test() {
-    alert("Information Submitted!");
-    console.log($('#validationCustom01').val())
-    console.log($('#validationCustom02').val())
-    console.log($('#validationCustom03').val())
-    console.log($('#validationCustom04').val())
-    console.log($('#validationCustom05').val())
-    console.log($('#validationCustom06').val())
-    console.log($('#exampleInputEmail1').val())
-    return true;
- }
-
-
-
-// $('#form').submit(function(){
-//     $.ajax({
-//       url: $('#form').attr('action'),
-//       type: 'POST',
-//       data : $('#form').serialize(),
-//       success: function(){
-//         console.log('form submitted.');
-//       }
-//     });
-//     return false;
-// });
-=======
->>>>>>> 7137afbab0f168daff1620874f2a41af9221bffc
