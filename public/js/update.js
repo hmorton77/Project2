@@ -18,9 +18,12 @@ $(document).ready(function () {
     })
 });
 //finish post to backend
-$("#email-send-api").on("click", function () {
-    $.post( "reminder.handlebars", function( data ) {
-        $( ".result" ).html( data );
+$("#webapi").on("click", function () {
+    var email = $(".input").val()
+
+    $.post("/api/sendemail", {email}, function(results) {
+        console.log(results)
+        $( ".result" ).html(results);
 
     })
  

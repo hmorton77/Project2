@@ -1,6 +1,12 @@
 //dependency
 var db = require("../models");
 
+const sgMail = require("@sendgrid/mail");
+const dotenv = require("dotenv");
+
+dotenv.config();
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 //routes
 module.exports = function (app) {
   // get all the cases to be put on the main page
@@ -80,5 +86,29 @@ module.exports = function (app) {
 
   
   });
+  app.post("/api/sendemail", function (req, res) {
+    var msgData = req.body.email
+
+    const msg = {
+      to: msgData, // Change to your recipient
+      from: {
+        name: "Employer Name",
+        email: "leannaland2011@gmail.com", // Change to your verified sender
+      },
+      subject: "Important Work Notice",
+      text: "Hello, it is time for you to return to work. Please attend your next shift",
+      html: "<strong>Hello, it is time for you to return to work. Please attend your next shift. </strong>",
+    };
+    //call your send grid stuff with the addresses you want
+    sgMail
+    .send(msg)
+    .then((results) => {
+      console.log("Email sent");
+      res.json(results)
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  })
 
 };
