@@ -17,7 +17,7 @@ const dotenv = require('dotenv')
 
 
 // connection to Public drive 
-//app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
+app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
 //..
 //routes
 
