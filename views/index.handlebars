@@ -1,6 +1,6 @@
 <div class="jumbotron">
     <h1 class="display-4">All Employees </h1>
-    <p class="lead">Placeholder [p] tag information</p>
+    <p class="lead">Will display all employees regardless of condition</p>
     <hr class="my-4" />
     <table style="width:100%">
         <tr>
@@ -25,7 +25,8 @@
             <td>{{this.currentCondition}}</td>
             <td>{{this.createdAt}}</td>
             <td>{{this.updatedAt}}</td>
-            <td><a class="btn btn-primary btn-sm" href="#" role="button">edit</a></td>
+            <td><a class="btn btn-primary btn-lg update-button" href="/update" role="button">Edit</a></td>
+
         </tr>
         {{/each}}
     </table>
@@ -85,10 +86,3 @@
         background-color: #242323;
     }
 </style>
-
-<footer>
-    <div>
-        <h5> Contributors: Leanna Land, Cyle McGregor, Harold Morton, Bradley Williams</h5>
-    </div>
-
-</footer>

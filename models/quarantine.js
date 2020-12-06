@@ -2,37 +2,39 @@ module.exports = function (sequelize, DataTypes) {
   var Employees = sequelize.define("Employees", {
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
-        len: [1, 100],
+        len: [0, 100],
       },
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
-        len: [1, 100],
+        len: [0, 100],
       },
     },
     quarantineStart: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 100],
+        len: [0, 100],
       },
+      defaultValue: "01/01/2020",
     },
     quarantineEnd: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 100],
+        len: [0, 100],
       },
+      defaultValue: "01/01/2020",
     },
     covidConfirmed: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
-        len: [1, 100],
+        len: [0, 100],
       },
     },
     currentCondition: {
