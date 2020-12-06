@@ -14,13 +14,8 @@ const path = require("path");
 const sgMail = require("@sendgrid/mail");
 const dotenv = require("dotenv");
 
-<<<<<<< HEAD
 // connection to Public drive 
 app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
-=======
-// connection to Public drive
-//app.use('/project2/public/views', express.static(path.join(__dirname, "public")));
->>>>>>> 7137afbab0f168daff1620874f2a41af9221bffc
 //..
 //routes
 

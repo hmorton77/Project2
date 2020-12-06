@@ -39,22 +39,3 @@ $(document).ready(function () {
     });
   });
 });
-<<<<<<< HEAD
-
-
-function test() {
-    alert("Information Submitted!");
-    console.log($('#validationCustom01').val())
-    console.log($('#validationCustom02').val())
-    console.log($('#validationCustom03').val())
-    console.log($('#validationCustom04').val())
-    console.log($('#validationCustom05').val())
-    console.log($('#validationCustom06').val())
-    console.log($('#exampleInputEmail1').val())
-    return true;
- }
-
-
-
-=======
->>>>>>> 7137afbab0f168daff1620874f2a41af9221bffc
