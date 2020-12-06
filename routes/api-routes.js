@@ -33,7 +33,7 @@ module.exports = function (app) {
   app.post("/api/cases", function (req, res) {
     console.log(req.body);
     console.log("clicked route");
-    db.Quarantine.Create({
+    db.Employees.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       quarantineStart: req.body.quarantineStart,
