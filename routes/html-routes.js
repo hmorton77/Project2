@@ -17,6 +17,10 @@ module.exports = function (app) {
   app.get("/submission", function (req, res) {
     res.render("submission");
   });
+  // the update page when we click the edit button on a record.
+  app.get("/update", function (req, res) {
+    res.render("update");
+  });
   //open the symptomatic employee page
   app.get("/symptomatic", function (req, res) {
     db.Employees.findAll({

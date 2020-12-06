@@ -8,14 +8,14 @@
     <div class="form-row">
         <div class="col-md-6 mb-3">
             <label for="validationCustom01">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" value="" required>
+            <input type="text" class="form-control" id="firstName" value="" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
         </div>
         <div class="col-md-6 mb-3">
             <label for="validationCustom02">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" value="" required>
+            <input type="text" class="form-control" id="lastName" value="" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
@@ -24,7 +24,7 @@
     <div class="form-row">
         <div class="col-md-6 mb-3">
             <label for="validationCustom03">COVID Positive Date</label>
-            <input type="date" class="form-control" id="validationCustom03" required>
+            <input type="date" class="form-control" id="posDate" required>
             <div class="invalid-feedback">
                 {{!-- Please provide a valid city. --}}
             </div>
@@ -41,7 +41,7 @@
     </div> --}}
         <div class="col-md-3 mb-3">
             <label for="validationCustom05">Employee Condition</label>
-            <input type="text" class="form-control" id="validationCustom04" required>
+            <input type="text" class="form-control" id="condition" required>
             <div class="invalid-feedback">
             </div>
         </div>
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-md-6">
             <label for="validationCustom03">Start Date</label>
-            <input type="date" class="form-control" id="validationCustom05" required>
+            <input type="date" class="form-control" id="qStart" required>
             <div class="invalid-feedback">
                 {{!-- Please provide a valid city. --}}
             </div>
@@ -59,7 +59,7 @@
 
             <div class="col-md-6">
             <label for="validationCustom03">End Date</label>
-            <input type="date" class="form-control" id="validationCustom06" required>
+            <input type="date" class="form-control" id="qEnd" required>
             <div class="invalid-feedback">
                 {{!-- Please provide a valid city. --}}
             </div>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="form-group">
-        <button type="button" class="btn btn-dark btn-lg btn-block" onclick="return test();">Add New Employee</button>
+        <button type="button" id = "newEmp" class="btn btn-dark btn-lg btn-block" onclick="return test();">Add New Employee</button>
     </div>
 
 </form>

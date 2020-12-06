@@ -26,45 +26,35 @@ $(document).ready(function () {
         $display.html(localizedDate);
       });
     });
-  });
 
-  var firstNameInput = $("#firstName");
-  var lastNameInput = $("#lastName");
-  var hosp = $("#hosp");
-  var condition = $("#condition");
-  var qStart = $("#qStart");
-  var qEnd = $("#qEnd");
+    var firstName = $("#firstName");
+    var lastName = $("#lastName");
+    var posDate = $("#posDate");
+    var condition = $("#condition");
+    var qStart = $("#qStart");
+    var qEnd = $("#qEnd");
 
-  function submitEmployee(data) {
-    $.post("/api/cases/", data);
-  }
+    function submitEmployee(data) {
+      console.log("jQuerypost call");
+      $.post("/api/cases", data);
+    }
 
-  // Click event to record employee details and call post request.
-  $("#newEmp").on("click", function () {
-    // event.preventDefault();
-    console.log("clicked");
-    // On success, post to the console.
-    var newEmployee = {
-      firstName: firstNameInput.val().trim(),
-      lastName: lastNameInput.val().trim(),
-      hospitalized: hosp.val().trim(),
-      currentCondition: condition.val().trim(),
-      quarantineStart: qStart.val().trim(),
-      quarantineEnd: qEnd.val().trim(),
-    };
-    console.log(newEmployee);
-    submitEmployee(newEmployee);
+    // Click event to record employee details and call post request.
+    $("#newEmp").on("click", function () {
+      // event.preventDefault();
+      console.log("clickity");
+      console.log(firstName.val());
+      // On success, post to the console.
+      var newEmployee = {
+        firstName: firstName.val().trim(),
+        lastName: lastName.val().trim(),
+        covidConfirmed: posDate.val().trim(),
+        currentCondition: condition.val().trim(),
+        quarantineStart: qStart.val().trim(),
+        quarantineEnd: qEnd.val().trim(),
+      };
+      console.log(newEmployee);
+      submitEmployee(newEmployee);
+    });
   });
 });
-
-function test() {
-  alert("Information Submitted!");
-  console.log($("#validationCustom01").val());
-  console.log($("#validationCustom02").val());
-  console.log($("#validationCustom03").val());
-  console.log($("#validationCustom04").val());
-  console.log($("#validationCustom05").val());
-  console.log($("#validationCustom06").val());
-  console.log($("#exampleInputEmail1").val());
-  return true;
-}
