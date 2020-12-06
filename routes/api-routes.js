@@ -19,16 +19,7 @@ module.exports = function (app) {
       res.json(dbQuar);
     });
   });
-  //get a single table entry
-  app.get("/api/cases/:id", function (req, res) {
-    db.Quarantine.findAll({
-      where: {
-        id: req.params.id,
-      },
-    }).then(function (dbQuar) {
-      res.json(dbQuar);
-    });
-  });
+
   //posting a new employee case FROM THE SUBMISSION FORM
   app.post("/api/cases", function (req, res) {
     console.log(req.body);
@@ -42,31 +33,12 @@ module.exports = function (app) {
       currentCondition: req.body.currentCondition,
       activeStatus: "1",
       createdAt: "01/01/2020",
-      updatedAt: "01/01/2020"
-
+      updatedAt: "01/01/2020",
     }).then(function (dbQuar) {
       res.json(dbQuar);
     });
   });
-  //"delete" route will just change the active status to false
-  app.put("/api/cases/delete", function (req, res) {
-    db.Quarantine.update(
-      {
-        activeStatus: false,
-      },
-      {
-        where: {
-          id: req.body.id,
-        },
-      }
-    )
-      .then(function (dbQuar) {
-        res.json(dbQuar);
-      })
-      .catch(function (err) {
-        res.json(err);
-      });
-  });
+  // =======================================TBA==================
   //update route to update posts
   app.put("/api/cases", function (req, res) {
     db.Quarantine.update(
@@ -91,26 +63,14 @@ module.exports = function (app) {
         res.json(err);
       });
   });
-  // Check if symptomatic
-  app.get("/api/cases/symptomatic", function (req, res) {
-    // db.Quarantine.findAll({currentCondition: "symptomatic"}).then(function (dbQuar) {
-    //   res.json(dbQuar);
-    // });
-
-    var data = [
-      {
-        firstName: "Joe",
-        lastName: "Bob",
+  //get a single table entry
+  app.get("/api/cases/:id", function (req, res) {
+    db.Quarantine.findAll({
+      where: {
+        id: req.params.id,
       },
-      {
-        firstName: "Jill",
-        lastName: "Bob",
-      },
-      {
-        firstName: "Billy",
-        lastName: "Bob",
-      },
-    ];
-    res.send("data");
+    }).then(function (dbQuar) {
+      res.json(dbQuar);
+    });
   });
 };

@@ -16,17 +16,19 @@ module.exports = function (sequelize, DataTypes) {
     },
     quarantineStart: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [0, 100],
       },
+      defaultValue: "01/01/2020",
     },
     quarantineEnd: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [0, 100],
       },
+      defaultValue: "01/01/2020",
     },
     covidConfirmed: {
       type: DataTypes.STRING,

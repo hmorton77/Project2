@@ -1,22 +1,5 @@
 $(document).ready(function () {
-  // webshim.setOptions('forms-ext', {
-  //     replaceUI: 'auto',
-  //     types: 'date',
-  //     date: {
-  //         startView: 2,
-  //         inlinePicker: true,
-  //         classes: 'hide-inputbtns'
-  //     }
-  // });
-  // webshim.setOptions('forms', {
-  //     lazyCustomMessages: true
-  // });
-  // //start polyfilling
-  // webshim.polyfill('forms forms-ext');
-
-  // var routes = require("../routes/api-routes.js");
-
-  //only last example using format display
+  //only last example using format display (CALENDAR DISPLAY)
   $(function () {
     $(".format-date").each(function () {
       var $display = $(".date-display", this);
@@ -26,14 +9,14 @@ $(document).ready(function () {
         $display.html(localizedDate);
       });
     });
-
+    // jquery designation of id's
     var firstName = $("#firstName");
     var lastName = $("#lastName");
     var posDate = $("#posDate");
     var condition = $("#condition");
     var qStart = $("#qStart");
     var qEnd = $("#qEnd");
-
+    // jquery call
     function submitEmployee(data) {
       console.log("jQuerypost call");
       $.post("/api/cases", data);
@@ -41,8 +24,6 @@ $(document).ready(function () {
 
     // Click event to record employee details and call post request.
     $("#newEmp").on("click", function () {
-      // event.preventDefault();
-      console.log("clickity");
       console.log(firstName.val());
       // On success, post to the console.
       var newEmployee = {
