@@ -18,15 +18,15 @@
         </tr>
         {{#each result}}
         <tr>
-            <td id = "firstName">{{this.firstName}}</td>
-            <td id = "lastName">{{this.lastName}}</td>
-            <td id = "qStart">{{this.quarantineStart}}</td>
-            <td id = "qEnd">{{this.quarantineEnd}}</td>
-            <td id = "posDate">{{this.covidConfirmed}}</td>
-            <td id = "condition">{{this.currentCondition}}</td>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.quarantineStart}}</td>
+            <td>{{this.quarantineEnd}}</td>
+            <td>{{this.covidConfirmed}}</td>
+            <td>{{this.currentCondition}}</td>
             <td>{{this.createdAt}}</td>
             <td>{{this.updatedAt}}</td>
-            <td><a class="btn btn-primary btn-lg" href="#" role="button">Edit</a></td>
+            <td><a class="btn btn-primary btn-lg" href="#" role="button" class = "updateButton">Edit</a></td>
 
         </tr>
         {{/each}}

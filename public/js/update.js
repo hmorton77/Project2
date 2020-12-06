@@ -25,7 +25,7 @@ $(document).ready(function () {
     //         });
     // }
 
-    $("#updateButton").on("click", function () {
+    $(".updateButton").on("click", function () {
         var updatedInfo = {
             id = "",
             firstName: firstNameInput.val().trim(),
