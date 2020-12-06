@@ -41,7 +41,12 @@
     </div> --}}
         <div class="col-md-3 mb-3">
             <label for="validationCustom05">Employee Condition</label>
-            <input type="text" class="form-control" id="condition" required>
+            {{!-- <input type="text" class="form-control" id="condition" required> --}}
+            <select  name="Status" id = "condition">
+  <option value="Asymptomatic">Asymptomatic</option>
+  <option value="Symptomatic">Symptomatic</option>
+  <option value="Hospitalized">Hospitalized (symptomatic)</option>
+</select>
             <div class="invalid-feedback">
             </div>
         </div>
