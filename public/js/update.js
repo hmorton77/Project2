@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     $("#updateButton").on("click", function () {
         var updatedInfo = {
-            id = "",
+            id : "",
             firstName: firstNameInput.val().trim(),
             lastName: lastNameInput.val().trim(),
             covidConfirmed: PosDate.val().trim(),
@@ -38,20 +38,31 @@ $(document).ready(function () {
         console.log(updatedInfo);
         updateEmployee(updatedInfo);
 
-    })
+    });
 });
 
 $("#deleteButton").on("click", function () {
     var identifier = {
-        id = ""
+        id : ""
     }
     updateEmployee(identifier);
 
 });
+//finish post to backend
+$("#email-send-api").on("click", function () {
+    $.post( "reminder.handlebars", function( data ) {
+        $( ".result" ).html( data );
+
+    })
+ 
+});
+
+
 
 // Testing for get request
-$.get("api/cases/symptomatic").then(function(data){
-    console.log(data)
+// $.get("api/cases/symptomatic").then(function(data){
+//     console.log(data)
+// });
   //   for (let i = 0; i < data.length; i++) {
   //   var div = document.createElement("div")
   // div.innerHTML = `
@@ -61,7 +72,7 @@ $.get("api/cases/symptomatic").then(function(data){
   // document.getElementById("symptomatic-employees").appendChild(div)
     
   // }
-  })
+
   
   // var data = [
   //   {

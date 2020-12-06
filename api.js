@@ -1,10 +1,4 @@
-// Your API call must have the following components:
 
-// A Host (the host for Web API v3 requests is always https://api.sendgrid.com/v3/)
-// An Authorization Header
-// An API Key passed in the Authorization Header
-// A Request (when submitting data to a resource via POST or PUT, you must submit your request body in JSON format)
-// read more: https://sendgrid.com/docs/for-developers/sending-email/quickstart-nodejs
 
 const path = require("path");
 //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
@@ -21,16 +15,11 @@ const dotenv = require("dotenv");
 
 /////
 
+
 dotenv.config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-$("#webapi").click(function () {
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log("Email sent");
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
+
+
+
+

@@ -108,4 +108,12 @@ module.exports = function (app) {
     ];
     res.send("data");
   });
+
+  app.post("update.js", function (req, res) {
+    //call your send grid stuff with the addresses you want
+  
+
+  
+  });
+
 };
