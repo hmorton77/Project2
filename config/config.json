@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "mrssnuffy11",
+    "password": "root",
     "database": "tracked_employees",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "mrssnuffy11",
+    "password": "root",
     "database": "tracked_employees",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "mrssnuffy11",
+    "password": "root",
     "database": "tracked_employees",
     "host": "127.0.0.1",
     "dialect": "mysql"

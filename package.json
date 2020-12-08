@@ -2,10 +2,8 @@
   "name": "project2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "server.js",
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,5 +15,8 @@
     "mysql2": "^1.6.4",
     "nodemon": "^2.0.6",
     "sequelize": "^4.41.2"
+  },
+  "scripts": {
+    "test": "node server.js"
   }
 }
