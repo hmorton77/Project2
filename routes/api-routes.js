@@ -93,7 +93,7 @@ module.exports = function (app) {
       to: msgData, // Change to your recipient
       from: {
         name: "Employer Name",
-        email: "leannaland2011@gmail.com", // Change to your verified sender
+        email: "Sender EMAIL GOES HERE", // Change to your verified sender
       },
       subject: "Important Work Notice",
       text: "Hello, it is time for you to return to work. Please attend your next shift",
